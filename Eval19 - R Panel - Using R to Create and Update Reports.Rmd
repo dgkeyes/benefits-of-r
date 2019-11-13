@@ -1,0 +1,112 @@
+---
+title: "Using R to Create and Update Reports"
+description: |
+  This was presented at the AEA Conference in 2019, located in Minneapolis, MN, in the "Benefits of learning R: A guide to getting started individually and as an organization" session. This builds off the code developed by Eric Einspruch of ELE Consulting, LLC for the panel session.
+author:
+  - name: Dana Wanzer
+    affiliation: University of Wisconsin-Stout
+    url: http://danawanzer.com
+date: November 14, 2019
+output: word_document
+---
+
+```{r setup, include=FALSE}
+ # Setup the R Markdown file
+# We want to tell R not to include the results of all chunks of data. These grey code chunks won't show up in our Word document!
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+
+
+# Load packages
+library(tidyverse) # Group of Tidyverse packages
+library(psych)     # General purpose toolbox
+
+# Read data (hypothetical; Program 1 only)
+AEA_2019 <- read.csv("AEA 2019 Example Data_Program1.csv", header = TRUE)
+
+
+# Read in new data (Program 2 only)
+New_Data <- read.csv("AEA 2019 Example Data_Program2.csv", header = TRUE, fileEncoding = "UTF-8-BOM")
+
+# Merge data
+AEA_2019 <-
+  AEA_2019 %>%
+  bind_rows(New_Data)
+```
+
+# Introduction
+The point of this document is to demonstrate how you can update your reports quickly and easily when you get new data. This R Markdown (Rmd) file was created to demonstrate how we can take an R script (developed by Eric Einspruch), turn it into an R Markdown file, and create a report for a client. However, (*dun dun dun!*) imagine that after I created the report, more data came in and my client asked me, "Hey Dana, can you update the report? Data from program #2 just came in. That shouldn't take too long, *right*?"
+
+With other data analysis programs, it might have. I would have had to rerun the data analysis (hopefully I saved syntax!) and manually add my numbers back in to the report document. Maybe I did it all in Excel and have my figures auto update and have my figures linked to the Word document... but maybe those links broke, because they always inevitably do, or my analyses couldn't be performed in Excel. Creating reports in R solves all of that! 
+
+You can think of this as a combined Word document and syntax script. I write things up just like a Word document and do my analyses as normal, but then I combine the two. This way, if I need to make changes to the analyses, I don't have to switch programs or copy-paste/manually update results. I just import my new data, click "Knit" and Voila!
+
+## Information about this data
+
+```{r}
+# Assign missing values
+AEA_2019 <- AEA_2019 %>% 
+     mutate(Part_4 = na_if(Part_4, 9))
+
+# Let R know the variable is categorical (nominal)
+AEA_2019 <- AEA_2019 %>% 
+     mutate(Program = factor(Program))
+
+# Create a new variable of their total participation score
+AEA_2019 <- AEA_2019 %>% 
+     mutate(Participation = (AEA_2019$Part_1 + 
+                             AEA_2019$Part_2 + 
+                             AEA_2019$Part_3 + 
+                             AEA_2019$Part_4 +
+                             AEA_2019$Part_5))
+```
+
+This data is completely fictional data created by Eric Einspruch for this panel presentation. In it, we have the ID of participants, which program they are in, their outcome score, satisfaction score, and five items measuring program participation. In this data, there are `r nrow(AEA_2019)` participants.
+
+# How satisfied are participants?
+
+```{r}
+# Frequency of satisfaction levels
+Satisfaction_Dist <- AEA_2019 %>% 
+  group_by(Satisfaction) %>% 
+  summarize(n = n()) %>% 
+  mutate(Percent = round(prop.table(n) * 100, 1)) 
+
+# Bar chart of the satisfaction levels of participants. 
+ggplot(AEA_2019, aes(x = Satisfaction, y = ..prop.. * 100, group = 1)) +
+  geom_bar() +
+  ylim(0, 100)
+```
+
+Overall, `r Satisfaction_Dist[1,3]`% of participants were highly satisfied with the program. `r Satisfaction_Dist[2,3]`% were mostly satisfied, `r Satisfaction_Dist[3,3]`% were somewhat satisfied, `r Satisfaction_Dist[4,3]`% were slightly satisfied, and `r Satisfaction_Dist[5,3]`% were not at all satisfied. 
+
+# How is participation related to participants' outcomes?
+
+```{r}
+# Scatterplot
+ggplot(data = AEA_2019, 
+       mapping = aes(x = Outcome, 
+                     y = Participation)) +
+  geom_point()
+
+correlation <- cor.test(AEA_2019$Outcome, AEA_2019$Participation)
+```
+
+As shown in the graph above, participants with greater participation had higher outcome scores but this is not statistically significant, *r* = `r round(correlation$estimate, 2)`, *p* = `r round(correlation$p.value, 3)`.
+
+# More Information 
+
+## about R Markdown Files
+
+Hungry for more juicy information about R Markdown files? Check out this beginner's guide by RStudio on R Markdown files and all you can do with them. https://rmarkdown.rstudio.com/lesson-1.html On Lesson 9 "Output Formats" you can even learn how to export to other formats, including HTML, PDF, and even PowerPoint!
+
+## Tips for Exporting to Word
+
+Once you are done exporting to Word, you will then change your style and formatting. However, if you want to export or "knit" your document with a particular Word styling in the first place, it is possible! I encourage you to read this article to learn more about how to do some of this work up front: https://rmarkdown.rstudio.com/articles_docx.html
+
+## Lessons Learned in Reporting in R
+
+1. This works great if you're doing the same report over and over. Rather than recreating the report, all you need to do is change the data source and knit the Rmd document.
+
+2. This process works better if you are just presenting data rather than interpreting the data. This is because your interpretations may change with new data. For instance, what if adding my data resulted in a statistically significant correlation between participation and outcome? I would have to revise the language of the report to reflect that new interpretation. You may decide to do this after exporting to Word. Another option is to provide information on *how* to interpret statistics and results in the document (e.g., interpreting p-values) and allow the reader to come to conclusions themselves.
+
+3. Creating a lot of reports with only one minor tweak to them? Maybe you're creating this report for each site in your program. You can easily tweak your code to create many reports with the click of a button! Read more by the Urban Institute here: https://medium.com/@urban_institute/iterated-fact-sheets-with-r-markdown-d685eb4eafce
