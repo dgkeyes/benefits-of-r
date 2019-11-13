@@ -1,0 +1,42 @@
+---
+title: "Benefits of Learning R"
+description: |
+  A guide to getting started individually and as an organization
+author:
+  - name: Nora Jones 
+    url: https://example.com/norajones
+    affiliation: Spacely Sprockets
+    affiliation_url: https://example.com/spacelysprokets
+date: "November 13, 2019"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**[Panel at 2019 American Evaluation Assocation Conference](https://www.evaluationconference.org/e/in/eid=37&s=8893&req=info)**
+
+Are you interested in learning R but not sure where to start? Or have you heard of R but not sure why it is beneficial to make the transition to a new data analysis software? This session will provide tips and tricks for getting started, both individually and as an organization, as well as demonstrate multiple benefits of using R as your data analysis (and even reporting!) software. We will share our experiences as evaluators, staff and owners of evaluation companies, and R users and trainers to prepare you and your organization to make the jump to a new data analysis software that is free, full of features of potential uses, and able to improve your organization’s analysis and reporting mechanisms.
+
+## Getting Started with R (David Keyes)
+
+One of the main obstacles that many new R users face is simply getting started. Some users struggle to figure out what the nuts and bolts of getting started: What do you need to download? Where do you enter code? Others become overwhelmed with all of the resources available online for learning R. How do you know which approach to using R (and there are many!) is best? In this presentation, I will go step-by-step, helping people understand what R is, what you need to download, and what it looks like to begin using it. 
+
+## Fundamental Data Tasks in R (Eric Einspruch)
+
+This presentation takes the next step after downloading and installing R, introducing the fundamental skills of reading data (e.g.,reading data from an Excel file), handling data (e.g., creating a new variable and modifying an existing variable), conducting basic analyses (e.g., descriptive statistics), and creating data visualizations. Working from both the Base R and Tidyverse perspectives, the presentation will provide a solid foundation upon which participants can continue to build their knowledge of how to work with R to accomplish their data analysis and data visualization tasks.
+
+## Using R to Create and Update Reports (Dana Wanzer)
+
+Have you ever run your analyses and then had more data come in? Or realize you forgot to filter out some participants in some of your analyses? Or have a recurrent report for a client that is pretty similar each time? In all of these cases, doing analyses with coding, as opposed to a point-and-click interface, can save us time and prevent stress. Rather than having to rerun everything, all it takes is some edits to our previous code to update our work. This presentation will show how you can export your report directly from R, update it with new data or revised analyses, and have an updated report quickly and with minimal effort. 
+
+## The Moments after Leaping: Early Days of Adopting R (Tom McKlin)
+
+This presentation compliments Moving Our Entire Team to R by studying the organizational shift to R for a company at the beginning of this change.The Findings Group has evaluated computer science education interventions for over fifteen years, and many K-12 educators are preparing students to either pursue CS outright or practice CS knowledge and skills within the domains they pursue. We apply what we have learned from studying CS interventions to preparing staff, valuing computational thinking as an inherently creative endeavor, and sharing the algorithms that underlie our analyses as common professional practice.  We acknowledge that adopting computational practices prepares the company to be more nimble and responsive partners who practice the skills inherent in the programs we evaluate. We also discuss concerns with staffing, motivating and building knowledge in R among employees and consultants, converting procedures, extending analytic/visualization capacity, and diminishing the time between data collection and reporting.  
+
+## Moving our entire team to R (Ava Elliott)
+
+How do you replace your engine without stopping WHILE you are driving at highway speed? SPSS - and all of the data processes we attached to our SPSS syntax and analysis - was the engine that allowed us to work quickly and efficiently in highly interdependent teams. We had years of shared syntax, systems, and norms built around this data analysis software that allowed us to meet constant deadlines in a busy evaluation consulting business. This presentation will cover why we decided to switch to R, how we brought in outside consultants to formalize the process, and how we brought our team up to speed across our interdependent data roles. We will cover the mix of external and internal accountability we created for ourselves and the challenges and unexpected triumphs we encountered along the way.
+
+
