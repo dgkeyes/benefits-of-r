@@ -18,9 +18,6 @@ author:
   - name: Ava Elliott
     affiliation: Public Profit
     affiliation_url: http://publicprofit.net/
-    
-    
-    
 output: 
   distill::distill_article:
     css: style.css
@@ -42,7 +39,7 @@ One of the main obstacles that many new R users face is simply getting started. 
 
 ### Materials
 
-[HTML Slides](01-getting-strated-with-r/slides/slides.html) // [PDF Slides](01-getting-strated-with-r/slides/slides.pdf) // [Sample Code](01-getting-strated-with-r/sample-code.R)
+[Slides](01-getting-started-with-r/slides/slides.html) // [Sample Code](01-getting-started-with-r/sample-code.R)
 
 ### Contact Information
 
