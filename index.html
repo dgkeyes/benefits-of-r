@@ -24,10 +24,11 @@
   <meta property="description" itemprop="description" content="A guide to getting started individually and as an organization" />
   
   
-  <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2019-11-13" />
-  <meta property="article:created" itemprop="dateCreated" content="2019-11-13" />
-  <meta name="article:author" content="Nora Jones" />
+  <meta name="article:author" content="David Keyes" />
+  <meta name="article:author" content="Eric Einspruch" />
+  <meta name="article:author" content="Dana Wanzer" />
+  <meta name="article:author" content="Tom McKlin" />
+  <meta name="article:author" content="Ava Elliott" />
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Benefits of Learning R" />
@@ -44,7 +45,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Benefits of Learning R"]},{"type":"character","attributes":{},"value":["A guide to getting started individually and as an organization\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Nora Jones"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]},{"type":"character","attributes":{},"value":["Spacely Sprockets"]},{"type":"character","attributes":{},"value":["https://example.com/spacelysprokets"]}]}]},{"type":"character","attributes":{},"value":["November 13, 2019"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Benefits of Learning R"]},{"type":"character","attributes":{},"value":["A guide to getting started individually and as an organization\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["David Keyes"]},{"type":"character","attributes":{},"value":["R for the Rest of Us"]},{"type":"character","attributes":{},"value":["https://rfortherestofus.com/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Eric Einspruch"]},{"type":"character","attributes":{},"value":["ELE Consulting"]},{"type":"character","attributes":{},"value":["https://eleconsulting.com/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Dana Wanzer"]},{"type":"character","attributes":{},"value":["University of Wisconsin, Stout"]},{"type":"character","attributes":{},"value":["https://danawanzer.com"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Tom McKlin"]},{"type":"character","attributes":{},"value":["The Findings Group"]},{"type":"character","attributes":{},"value":["https://thefindingsgroup.org/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Ava Elliott"]},{"type":"character","attributes":{},"value":["Public Profit"]},{"type":"character","attributes":{},"value":["http://publicprofit.net/"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css"]}},"value":[{"type":"character","attributes":{},"value":["style.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1924,6 +1925,25 @@ distill-header .nav a {
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
+  <style type="text/css">d-article h2 {
+border-bottom: none;
+padding-bottom: 0;
+}
+d-article h3 {
+font-weight: 700;
+font-size: 18px;
+line-height: .25;
+margin-bottom: 2em;
+margin-top: 1em;
+}
+d-article a, d-article a:hover {
+color: #58C3AC;
+border-bottom: none;
+font-weight: 600;
+}
+d-byline .authors-affiliations {
+grid-column-end: span 3;
+}</style>
 
 </head>
 
@@ -1932,7 +1952,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Benefits of Learning R","description":"A guide to getting started individually and as an organization","authors":[{"author":"Nora Jones","authorURL":"https://example.com/norajones","affiliation":"Spacely Sprockets","affiliationURL":"https://example.com/spacelysprokets"}],"publishedDate":"2019-11-13T00:00:00.000-06:00","citationText":"Jones, 2019"}
+{"title":"Benefits of Learning R","description":"A guide to getting started individually and as an organization","authors":[{"author":"David Keyes","authorURL":"#","affiliation":"R for the Rest of Us","affiliationURL":"https://rfortherestofus.com/"},{"author":"Eric Einspruch","authorURL":"#","affiliation":"ELE Consulting","affiliationURL":"https://eleconsulting.com/"},{"author":"Dana Wanzer","authorURL":"#","affiliation":"University of Wisconsin, Stout","affiliationURL":"https://danawanzer.com"},{"author":"Tom McKlin","authorURL":"#","affiliation":"The Findings Group","affiliationURL":"https://thefindingsgroup.org/"},{"author":"Ava Elliott","authorURL":"#","affiliation":"Public Profit","affiliationURL":"http://publicprofit.net/"}]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1947,24 +1967,53 @@ distill-header .nav a {
 </div>
 
 <div class="d-byline">
-  Nora Jones <a href="https://example.com/norajones" class="uri">https://example.com/norajones</a> (Spacely Sprockets)<a href="https://example.com/spacelysprokets" class="uri">https://example.com/spacelysprokets</a>
+  David Keyes  (R for the Rest of Us)<a href="https://rfortherestofus.com/" class="uri">https://rfortherestofus.com/</a>
   
-<br />November 13, 2019
+,   Eric Einspruch  (ELE Consulting)<a href="https://eleconsulting.com/" class="uri">https://eleconsulting.com/</a>
+  
+,   Dana Wanzer  (University of Wisconsin, Stout)<a href="https://danawanzer.com" class="uri">https://danawanzer.com</a>
+  
+,   Tom McKlin  (The Findings Group)<a href="https://thefindingsgroup.org/" class="uri">https://thefindingsgroup.org/</a>
+  
+,   Ava Elliott  (Public Profit)<a href="http://publicprofit.net/" class="uri">http://publicprofit.net/</a>
+  
+
 </div>
 
 <div class="d-article">
-<p><strong><a href="https://www.evaluationconference.org/e/in/eid=37&amp;s=8893&amp;req=info">Panel at 2019 American Evaluation Assocation Conference</a></strong></p>
+<p>Thanks for your interest in our <a href="https://www.evaluationconference.org/e/in/eid=37&amp;s=8893&amp;req=info">panel at the 2019 American Evaluation Assocation Conference</a>. Below you will find information about each session as well as slides, code, and all other materials.</p>
+<h2 id="panel-description">Panel Description</h2>
 <p>Are you interested in learning R but not sure where to start? Or have you heard of R but not sure why it is beneficial to make the transition to a new data analysis software? This session will provide tips and tricks for getting started, both individually and as an organization, as well as demonstrate multiple benefits of using R as your data analysis (and even reporting!) software. We will share our experiences as evaluators, staff and owners of evaluation companies, and R users and trainers to prepare you and your organization to make the jump to a new data analysis software that is free, full of features of potential uses, and able to improve your organization’s analysis and reporting mechanisms.</p>
-<h2 id="getting-started-with-r-david-keyes">Getting Started with R (David Keyes)</h2>
+<h2 id="getting-started-with-r">Getting Started with R</h2>
 <p>One of the main obstacles that many new R users face is simply getting started. Some users struggle to figure out what the nuts and bolts of getting started: What do you need to download? Where do you enter code? Others become overwhelmed with all of the resources available online for learning R. How do you know which approach to using R (and there are many!) is best? In this presentation, I will go step-by-step, helping people understand what R is, what you need to download, and what it looks like to begin using it.</p>
-<h2 id="fundamental-data-tasks-in-r-eric-einspruch">Fundamental Data Tasks in R (Eric Einspruch)</h2>
+<h3 id="materials">Materials</h3>
+<p><a href="01-getting-strated-with-r/slides/slides.html">HTML Slides</a> // <a href="01-getting-strated-with-r/slides/slides.pdf">PDF Slides</a> // <a href="01-getting-strated-with-r/sample-code.R">Sample Code</a></p>
+<h3 id="contact-information">Contact Information</h3>
+<p>David Keyes // <a href="https://rfortherestofus.com/">R for the Rest of Us</a> // <a href="mailto:david@rfortherestofus.com">david@rfortherestofus.com</a></p>
+<h2 id="fundamental-data-tasks-in-r">Fundamental Data Tasks in R</h2>
 <p>This presentation takes the next step after downloading and installing R, introducing the fundamental skills of reading data (e.g.,reading data from an Excel file), handling data (e.g., creating a new variable and modifying an existing variable), conducting basic analyses (e.g., descriptive statistics), and creating data visualizations. Working from both the Base R and Tidyverse perspectives, the presentation will provide a solid foundation upon which participants can continue to build their knowledge of how to work with R to accomplish their data analysis and data visualization tasks.</p>
-<h2 id="using-r-to-create-and-update-reports-dana-wanzer">Using R to Create and Update Reports (Dana Wanzer)</h2>
+<h3 id="materials-1">Materials</h3>
+<p><a href="02-fundamental-data-tasks/AEA%202019%20Code.R">Sample Code</a></p>
+<h3 id="contact-information-1">Contact Information</h3>
+<p>Eric Einspruch // <a href="https://eleconsulting.com">ELE Consulting</a> // <a href="mailto:einspruch@eleconsulting.com">einspruch@eleconsulting.com</a></p>
+<h2 id="using-r-to-create-and-update-reports">Using R to Create and Update Reports</h2>
 <p>Have you ever run your analyses and then had more data come in? Or realize you forgot to filter out some participants in some of your analyses? Or have a recurrent report for a client that is pretty similar each time? In all of these cases, doing analyses with coding, as opposed to a point-and-click interface, can save us time and prevent stress. Rather than having to rerun everything, all it takes is some edits to our previous code to update our work. This presentation will show how you can export your report directly from R, update it with new data or revised analyses, and have an updated report quickly and with minimal effort.</p>
-<h2 id="the-moments-after-leaping-early-days-of-adopting-r-tom-mcklin">The Moments after Leaping: Early Days of Adopting R (Tom McKlin)</h2>
+<h3 id="materials-2">Materials</h3>
+<p><a href="03-using-r-to-update-reports/Eval19%20-%20R%20Panel%20-%20Using%20R%20to%20Create%20and%20Update%20Reports.Rmd">Sample RMarkdown Document</a> // <a href="03-using-r-to-update-reports/Eval19---R-Panel---Using-R-to-Create-and-Update-Reports.docx">Sample Report</a></p>
+<h3 id="contact-information-2">Contact Information</h3>
+<p>Dana Wanzer // <a href="https://danawanzer.com">University of Wisconsin, Stout</a> // <a href="mailto:dana@danawanzer.com">dana@danawanzer.com</a></p>
+<h2 id="the-moments-after-leaping-early-days-of-adopting-r">The Moments after Leaping: Early Days of Adopting R</h2>
 <p>This presentation compliments Moving Our Entire Team to R by studying the organizational shift to R for a company at the beginning of this change.The Findings Group has evaluated computer science education interventions for over fifteen years, and many K-12 educators are preparing students to either pursue CS outright or practice CS knowledge and skills within the domains they pursue. We apply what we have learned from studying CS interventions to preparing staff, valuing computational thinking as an inherently creative endeavor, and sharing the algorithms that underlie our analyses as common professional practice. We acknowledge that adopting computational practices prepares the company to be more nimble and responsive partners who practice the skills inherent in the programs we evaluate. We also discuss concerns with staffing, motivating and building knowledge in R among employees and consultants, converting procedures, extending analytic/visualization capacity, and diminishing the time between data collection and reporting.</p>
-<h2 id="moving-our-entire-team-to-r-ava-elliott">Moving our entire team to R (Ava Elliott)</h2>
+<h3 id="materials-3">Materials</h3>
+<p><a href="04-moments-after-leaping/R%20Org%20Presentation.pdf">Slides</a></p>
+<h3 id="contact-information-3">Contact Information</h3>
+<p>Tom McKlin // <a href="https://thefindingsgroup.org/">The Findings Group</a> // <a href="mailto:tom@thefindingsgroup.org">tom@thefindingsgroup.org</a></p>
+<h2 id="moving-our-entire-team-to-r">Moving Our Entire Team to R</h2>
 <p>How do you replace your engine without stopping WHILE you are driving at highway speed? SPSS - and all of the data processes we attached to our SPSS syntax and analysis - was the engine that allowed us to work quickly and efficiently in highly interdependent teams. We had years of shared syntax, systems, and norms built around this data analysis software that allowed us to meet constant deadlines in a busy evaluation consulting business. This presentation will cover why we decided to switch to R, how we brought in outside consultants to formalize the process, and how we brought our team up to speed across our interdependent data roles. We will cover the mix of external and internal accountability we created for ourselves and the challenges and unexpected triumphs we encountered along the way.</p>
+<h3 id="materials-4">Materials</h3>
+<p><a href="05-moving-our-entire-team-to-r/AEA2019_Rpres_PP.pptx">Slides</a> // <a href="05-moving-our-entire-team-to-r/MovingOurTeamtoR.pdf">Handout</a></p>
+<h3 id="contact-information-4">Contact Information</h3>
+<p>Ava Elliott // <a href="http://publicprofit.net/">Public Profit</a> // <a href="mailto:ava@publicprofit.net">ava@publicprofit.net</a></p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
