@@ -20,3 +20,7 @@ d-article a, d-article a:hover {
 d-byline .authors-affiliations {
     grid-column-end: span 3;
 }
+
+d-title p {
+    font-size: 1.7rem;
+}
