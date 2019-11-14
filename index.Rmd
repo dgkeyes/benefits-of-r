@@ -39,7 +39,7 @@ One of the main obstacles that many new R users face is simply getting started. 
 
 ### Materials
 
-[Slides](01-getting-started-with-r/slides/slides.html) // [Sample Code](01-getting-started-with-r/sample-code.R)
+[Slides](01-getting-started-with-r/slides/slides.html) // [Sample Code](01-getting-started-with-r/sample-code.R) // [Free Getting Started with R Online Course](https://rfortherestofus.com/courses/getting-started/)
 
 ### Contact Information
 
