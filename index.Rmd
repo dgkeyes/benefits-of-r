@@ -7,7 +7,7 @@ author:
     affiliation: R for the Rest of Us
     affiliation_url: https://rfortherestofus.com/
   - name: Eric Einspruch
-    affiliation: ELE Consulting
+    affiliation: ELE Consulting, LLC
     affiliation_url: https://eleconsulting.com/
   - name: Dana Wanzer
     affiliation: University of Wisconsin, Stout
@@ -57,7 +57,7 @@ This presentation takes the next step after downloading and installing R, introd
 
 ### Contact Information
 
-Eric Einspruch // [ELE Consulting](https://eleconsulting.com) // [einspruch@eleconsulting.com](mailto:einspruch@eleconsulting.com)
+Eric Einspruch // [ELE Consulting, LLC](https://eleconsulting.com) // [einspruch@eleconsulting.com](mailto:einspruch@eleconsulting.com)
 
 ## Using R to Create and Update Reports
 
@@ -73,7 +73,7 @@ Dana Wanzer // [University of Wisconsin, Stout](https://danawanzer.com) // [dana
 
 ## The Moments after Leaping: Early Days of Adopting R
 
-This presentation compliments Moving Our Entire Team to R by studying the organizational shift to R for a company at the beginning of this change.The Findings Group has evaluated computer science education interventions for over fifteen years, and many K-12 educators are preparing students to either pursue CS outright or practice CS knowledge and skills within the domains they pursue. We apply what we have learned from studying CS interventions to preparing staff, valuing computational thinking as an inherently creative endeavor, and sharing the algorithms that underlie our analyses as common professional practice.  We acknowledge that adopting computational practices prepares the company to be more nimble and responsive partners who practice the skills inherent in the programs we evaluate. We also discuss concerns with staffing, motivating and building knowledge in R among employees and consultants, converting procedures, extending analytic/visualization capacity, and diminishing the time between data collection and reporting.  
+This presentation compliments Moving Our Entire Team to R by studying the organizational shift to R for a company at the beginning of this change.The Findings Group has evaluated computer science education interventions for over fifteen years, and many K-12 educators are preparing students to either pursue CS outright or practice CS knowledge and skills within the domains they pursue. We apply what we have learned from studying CS interventions to preparing staff, valuing computational thinking as an inherently creative endeavor, and sharing the algorithms that underlie our analyses as common professional practice. We acknowledge that adopting computational practices prepares the company to be more nimble and responsive partners who practice the skills inherent in the programs we evaluate. We also discuss concerns with staffing, motivating and building knowledge in R among employees and consultants, converting procedures, extending analytic/visualization capacity, and diminishing the time between data collection and reporting. 
 
 ### Materials
 
@@ -89,7 +89,7 @@ How do you replace your engine without stopping WHILE you are driving at highway
 
 ### Materials
 
-[Slides](05-moving-our-entire-team-to-r/AEA2019_Rpres_PP.pptx) // [Handout](05-moving-our-entire-team-to-r/MovingOurTeamtoR.pdf)
+[Handout](05-moving-our-entire-team-to-r/MovingOurTeamtoR.pdf)
 
 ### Contact Information
 
