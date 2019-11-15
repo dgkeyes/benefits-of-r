@@ -32,6 +32,14 @@ library(knitr)
 
 ```
 
+# Materials
+
+Slides and other materials from this session can be found at:
+
+** bit.ly/benefitsofR**
+
+---
+
 class: center, middle, dk-section-title
 
 background-image: url("images/installation.jpeg")
@@ -234,7 +242,7 @@ Let's read data from a CSV file.
 
 ```{r eval = T, echo = F}
 
-faketucky <- read_csv(here("data", "faketucky.csv"))
+faketucky <- read_csv(here("01-getting-started-with-r/data", "faketucky.csv"))
 
 
 ```
